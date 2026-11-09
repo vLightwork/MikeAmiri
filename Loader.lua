@@ -5,7 +5,7 @@ if Loaded then
 end
 pcall(function() Loaded = true end)
 
-getgenv().SCRIPT_KEY = GoodNight.Key
+getgenv().SCRIPT_KEY = MikeAmiri.Key
 
 Adonis = true
 
