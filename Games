@@ -1,10 +1,4 @@
 local GameList = {
-    [5602055394]      = {
-        Name = 'Hood Modded';
-        Remote = 'MAINEVENT';
-        Argument = 'MousePos';
-        BodyEffects = 'K.O'
-    };
     [139144803593140] = {
         Name = 'Da Downhill';
         Remote = 'MAINEVENT';
