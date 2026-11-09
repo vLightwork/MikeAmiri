@@ -1,4 +1,4 @@
-local GameList = {
+GameList = {
     [139144803593140] = {
         Name = 'Da Downhill';
         Remote = 'MAINEVENT';
@@ -25,7 +25,7 @@ local GameList = {
     }
 }
 
-local DaHood = {
+DaHood = {
     [2788229376] =  {
         Name = 'Da Hood'
     };
