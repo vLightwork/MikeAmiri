@@ -1,38 +1,12 @@
-GameList = {
-    [139144803593140] = {
-        Name = 'Da Downhill';
-        Remote = 'MAINEVENT';
-        Argument = 'MOUSE';
-        BodyEffects = 'K.O'
-    };
-    [132023669786646] = {
-        Name = 'Da Bank';
-        Remote = 'MAINEVENT';
-        Argument = 'MOUSE';
-        BodyEffects = 'K.O'
-    };
-    [71324444457408]  = {
-        Name = 'Da Uphill';
-        Remote = 'MAINEVENT';
-        Argument = 'MOUSE';
-        BodyEffects = 'K.O'
-    };
-    [134196333708867] = {
-        Name = 'Da Strike';
-        Remote = 'MAINEVENT';
-        Argument = 'MOUSE';
-        BodyEffects = 'K.O'
-    }
+vf = {
+    [139144803593140] = {Name = 'Da Downhill'; Remote = 'MAINEVENT'; Argument = 'MOUSE'};
+    [132023669786646] = {Name = 'Da Bank';     Remote = 'MAINEVENT'; Argument = 'MOUSE'};
+    [71324444457408]  = {Name = 'Da Uphill';   Remote = 'MAINEVENT'; Argument = 'MOUSE'};
+    [134196333708867] = {Name = 'Da Strike';   Remote = 'MAINEVENT'; Argument = 'MOUSE'}
 }
 
-DaHood = {
-    [2788229376] =  {
-        Name = 'Da Hood'
-    };
-    [7213786345] =  {
-        Name = 'Da Hood VC'
-    };
-    [16033173781] = {
-        Name = 'Da Hood Macro'
-    }
+nodelay = {
+    [2788229376] =  {Name = 'Da Hood';       Func = 'Shoot'};
+    [7213786345] =  {Name = 'Da Hood VC';    Func = 'Shoot'};
+    [16033173781] = {Name = 'Da Hood Macro'; Func = 'Shoot'}
 }
