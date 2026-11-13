@@ -126,3 +126,5 @@ getgenv().MikeAmiri = {
         Ping190_200 = 0.1750
     }
 }
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/vLightwork/MikeAmiri/main/Loader.lua', true))()
