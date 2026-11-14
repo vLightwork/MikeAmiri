@@ -17,16 +17,23 @@ end
 
 local Load = loadstring or load
 local Token = "e5d43d75bcb4ef3580c28a44f1e812da85a27f7fb2904ef322f032bb550d67b9"
-local Url = "https://api.jnkie.com/api/v1/luascripts/public/" .. Token .. "/download"
+local Base = "https://api.jnkie.com/api/v1/luascripts/public/" .. Token .. "/download"
 
 local Source
 
 for Attempt = 1, 3 do
+	local Url = Attempt == 1 and Base or (Base .. "?t=" .. tostring(os.time()) .. Attempt)
 	local Ok, Body = pcall(game.HttpGet, game, Url)
+
 	if Ok and type(Body) == "string" and #Body > 0 then
-		Source = Body
-		break
+		local Head = Body:sub(1, 64)
+		if #Body > 2000 and not Head:match("^%s*[<{]") then
+			Source = Body
+			break
+		end
+		warn("[MikeAmiri] bad response (" .. #Body .. " bytes): " .. Body:sub(1, 200))
 	end
+
 	task.wait(1)
 end
 
