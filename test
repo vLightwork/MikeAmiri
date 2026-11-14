@@ -1,0 +1,47 @@
+if (not game:IsLoaded()) then game.Loaded:Wait() end
+
+if Loaded then
+	return
+end
+pcall(function() Loaded = true end)
+
+getgenv().SCRIPT_KEY = MikeAmiri.Key
+
+Adonis = true
+
+if Adonis then
+	pcall(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/vLightwork/Lightwork-Stuff/main/Adonis"))()
+	end)
+end
+
+local Load = loadstring or load
+local Token = "e5d43d75bcb4ef3580c28a44f1e812da85a27f7fb2904ef322f032bb550d67b9"
+local Url = "https://api.jnkie.com/api/v1/luascripts/public/" .. Token .. "/download"
+
+local Source
+
+for Attempt = 1, 3 do
+	local Ok, Body = pcall(game.HttpGet, game, Url)
+	if Ok and type(Body) == "string" and #Body > 0 then
+		Source = Body
+		break
+	end
+	task.wait(1)
+end
+
+if not Source then
+	warn("[MikeAmiri] download failed")
+	return
+end
+
+local Chunk, CompileError = Load(Source, "=MikeAmiri")
+if not Chunk then
+	warn("[MikeAmiri] compile failed: " .. tostring(CompileError))
+	return
+end
+
+local RunOk, RunError = pcall(Chunk)
+if not RunOk then
+	warn("[MikeAmiri] runtime failed: " .. tostring(RunError))
+end
