@@ -5,9 +5,9 @@ if Loaded then
 end
 pcall(function() Loaded = true end)
 
-getgenv().SCRIPT_KEY = MikeAmiri.Key
+getgenv().SCRIPT_KEY = MikeAmiri.Key;
 
-if MikeAmiri.Version == 'V1.2' then
+if MikeAmiri.StartUP.Version == 'V1.2' then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/vLightwork/Lightwork-Stuff/main/AdonisV2"))()
 end
 
