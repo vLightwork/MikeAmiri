@@ -2,11 +2,17 @@ vf = {
     [139144803593140] = {Name = 'Da Downhill'; Remote = 'MAINEVENT'; Argument = 'MOUSE'};
     [132023669786646] = {Name = 'Da Bank';     Remote = 'MAINEVENT'; Argument = 'MOUSE'};
     [71324444457408]  = {Name = 'Da Uphill';   Remote = 'MAINEVENT'; Argument = 'MOUSE'};
-    [134196333708867] = {Name = 'Da Strike';   Remote = 'MAINEVENT'; Argument = 'MOUSE'}
+    [134196333708867] = {Name = 'Da Strike';   Remote = 'MAINEVENT'; Argument = 'MOUSE'};
 }
 
 nodelay = {
     [2788229376] =  {Name = 'Da Hood';       Func = 'Shoot'};
     [7213786345] =  {Name = 'Da Hood VC';    Func = 'Shoot'};
-    [16033173781] = {Name = 'Da Hood Macro'; Func = 'Shoot'}
+    [16033173781] = {Name = 'Da Hood Macro'; Func = 'Shoot'};
+}
+
+othergames = { -- wip
+    [109397169461300] = {Name = 'Sniper Duels'; Func = ''};
+    [82835505740239]  = {Name = 'Pistol Duels'; Func = ''};
+    [114234929420007] = {Name = 'Bloxstrike';   Func = ''};
 }
