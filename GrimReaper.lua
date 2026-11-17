@@ -1,28 +1,34 @@
 getgenv().MikeAmiri = {
-    Key = 'API_Key_Here';
-
---    { Config below }
+    Key = 'Key_Here';
 
     StartUP = {
-        Version = 'V1.2';
+        Version = 'V1.3';
         Intro = true;
+        Options = {
+            SetLowGFX = true; -- Automatically sets low gfx on
+            SetMuteBoomBox = true; -- Automatically sets mute boom box on
+            LoadTime = true; -- Tells you how long it took you to load the cheat ( For debug )
+        };
         Unlock = {
             Enabled = true;
             Cap = 999;
             Optimizer = {
-                Enabled = true; -- This will make your game way smoother by alot, unlocks hz, makes game smoother and more
+                Enabled = false; -- This will make your game way smoother by alot, unlocks hz, makes game smoother and more. ( NOT UNIVERSAL )
             }
         };
         Panic = {
             Enabled = true;
-            KeyBind = '=' -- Turns the cheat off or on
+            KeyBind = '=' -- Turns the cheat off or on.
         }
     };
     SilentAim = {
         Enabled = true;
+        Method = 'Auto';
         HitChance = 100;
-        KeyBind = 'p';
-        Predict = true; -- Disable for 0 delay games
+        AirshotHitChance = 100;
+        KeyBindEnabled = true;
+        KeyBind = 'Y';
+        Predict = false;
         Prediction = 0.135;
         HitPart = 'HumanoidRootPart';
         NearestCursorHitPart = true;
@@ -39,13 +45,13 @@ getgenv().MikeAmiri = {
         SmoothValue = 0.0700;
         AirShot_SmoothValue = 0.0600;
         HitPart = 'HumanoidRootPart';
-        NearestCursorHitPart = true;
-        EasingStyle = {
-            First = 'Sine';
+        NearestCursorHitPart = false;
+        EasingStyle = { -- ( https://create.roblox.com/docs/reference/engine/enums/EasingStyle ) for all methods.
+            First = 'Quart';
             Second = 'Linear';
         };
         Shake = {
-            Enabled = true;
+            Enabled = false;
             Shake_X = 5;
             Shake_Y = 5;
             Shake_Z = 5;
@@ -80,7 +86,26 @@ getgenv().MikeAmiri = {
         };
         Notifications = {
             Cheats  = {  SilentAim = true; CamLock = false };
+            Utility = {
+                Chat = { Enabled = true; Method = 'Notify'};
+                Mod  = { Enabled = true; Method = 'Notify'}
+            }
         }
+    };
+    Misc = {
+        Emotes = {
+            Enabled = false,
+            Animations = { -- Pack is the animation pack used for emotes. Most games use 'AnimationPack'.
+                Lay   = {Enabled = true; KeyBind = 'j'; Pack = 'AnimationPack'};
+                Greet = {Enabled = true; KeyBind = 'g'; Pack = 'AnimationPack'};
+            };
+        };
+        ModAwareness = {
+            Enabled = true;
+            Method = 'Notification'; -- 'Kick' or 'Notification'
+            Message = 'mod';
+            Kick_Message = 'Please check your internet connection and try again.'
+        };
     };
     GunFov = {
         Enabled = false;
@@ -93,8 +118,8 @@ getgenv().MikeAmiri = {
         Enabled = false;
         Fov = true;
         Prediction = false;
-        Close = 25; -- Detection in studs
-        Mid = 60; -- Detection in studs
+        Close = 25; -- Detection in studs.
+        Mid = 60; -- Detection in studs.
         Far = math.huge; -- Detection in studs ( Don't touch )
         Close_Fov = 70;
         Mid_Fov = 40;
@@ -103,8 +128,19 @@ getgenv().MikeAmiri = {
         Mid_Prediction = 0.12;
         Far_Prediction = 0.115
     };
-    ['AutoPrediction'] = {
-        Enabled = false; -- Change settings for better results
+    Chat = {
+        Enabled = true;
+        Notifications = true;
+        SilentPrediction = '!spred';
+        SilentRadius = '!sradius';
+        ShowCircle = '!visible';
+        HitChance = '!hc';
+        AirshotHitChance = '!ahc';
+        EnableGunFov = '!gfov';
+        EnableRange = '!range';
+    };
+    AutoPrediction = {
+        Enabled = false; -- Change settings for better results.
         Ping0_10 = 0.1000;
         Ping_20_30 = 0.1100;
         Ping30_40 = 0.1125;
@@ -126,7 +162,6 @@ getgenv().MikeAmiri = {
         Ping190_200 = 0.1750
     }
 }
-
 
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/vLightwork/MikeAmiri/main/Loader.lua', true))()
