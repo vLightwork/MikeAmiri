@@ -1,13 +1,13 @@
 getgenv().MikeAmiri = {
-    Key = 'Key_Here';
+    Key = 'API_Key_Here';
 
     StartUP = {
-        Version = 'V1.3';
+        Version = 'V1.4';
         Intro = true;
         Options = {
-            SetLowGFX = true; -- Automatically sets low gfx on
-            SetMuteBoomBox = true; -- Automatically sets mute boom box on
-            LoadTime = true; -- Tells you how long it took you to load the cheat ( For debug )
+            SetLowGFX = false;
+            SetMuteBoomBox = true;
+            AutoReload = false;
         };
         Unlock = {
             Enabled = true;
@@ -44,7 +44,9 @@ getgenv().MikeAmiri = {
         Smooth = true;
         SmoothValue = 0.0700;
         AirShot_SmoothValue = 0.0600;
+        AirshotHitPart_Enabled = true;
         HitPart = 'HumanoidRootPart';
+        Airshot_HitPart = 'Head';
         NearestCursorHitPart = false;
         EasingStyle = { -- ( https://create.roblox.com/docs/reference/engine/enums/EasingStyle ) for all methods.
             First = 'Quart';
@@ -60,13 +62,14 @@ getgenv().MikeAmiri = {
     Visuals = {
         SilentAim = {
             Show = true;
-            StickFov = false;
+            StickyFov = false;
             Radius = 50;
             Color = Color3.fromRGB(100, 154, 200)
         };
         CamLock = {
             Show = false;
             Radius_Enabled = false;
+            Only_In_Fov = true;
             Radius = 100;
             Color = Color3.fromRGB(100, 154, 200)
         }
@@ -85,7 +88,7 @@ getgenv().MikeAmiri = {
             AntiAimViewer = true
         };
         Notifications = {
-            Cheats  = {  SilentAim = true; CamLock = false };
+            Cheats  = { SilentAim = true; Method = 'Notify'};
             Utility = {
                 Chat = { Enabled = true; Method = 'Notify'};
                 Mod  = { Enabled = true; Method = 'Notify'}
@@ -105,6 +108,29 @@ getgenv().MikeAmiri = {
             Method = 'Notification'; -- 'Kick' or 'Notification'
             Message = 'mod';
             Kick_Message = 'Please check your internet connection and try again.'
+        };
+        Spin = {
+            Enabled = true;
+            KeyBind = 'B';
+            Rotation = 360;
+            Speed = 5;
+        };
+        Character = {
+            AutoGetUp = true;
+            Movement = {
+                Enabled = true;
+                Notifications = true;
+                KeyBind = 'F';
+                Method = 'WalkSpeed'; -- 'CFrame' or 'WalkSpeed'
+                Speed = 250;
+            };
+            Jump = {
+                Enabled = true;
+                NoJumpCoolDown = true;
+                Notifications = true;
+                KeyBind = 'T';
+                Power = 100;
+            }
         };
     };
     GunFov = {
