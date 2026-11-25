@@ -21,6 +21,7 @@ getgenv().MikeAmiri = {
             KeyBind = '=' -- Turns the cheat off or on.
         }
     };
+
     SilentAim = {
         Enabled = true;
         Method = 'Auto';
@@ -59,6 +60,7 @@ getgenv().MikeAmiri = {
             Shake_Z = 5;
         }
     };
+
     Visuals = {
         SilentAim = {
             Show = true;
@@ -74,6 +76,7 @@ getgenv().MikeAmiri = {
             Color = Color3.fromRGB(100, 154, 200)
         }
     };
+
     Safety = {
         AntiGroundShots = true;
         Checks = {
@@ -95,6 +98,7 @@ getgenv().MikeAmiri = {
             }
         }
     };
+
     Misc = {
         Emotes = {
             Enabled = false,
@@ -133,6 +137,7 @@ getgenv().MikeAmiri = {
             }
         };
     };
+
     GunFov = {
         Enabled = false;
         DoubleBarrel = 20;
@@ -140,6 +145,7 @@ getgenv().MikeAmiri = {
         TacticalShotgun = 20;
         Shotgun = 20
     };
+
     Range = {
         Enabled = false;
         Fov = true;
@@ -154,6 +160,7 @@ getgenv().MikeAmiri = {
         Mid_Prediction = 0.12;
         Far_Prediction = 0.115
     };
+
     Chat = {
         Enabled = true;
         Notifications = true;
@@ -165,6 +172,7 @@ getgenv().MikeAmiri = {
         EnableGunFov = '!gfov';
         EnableRange = '!range';
     };
+
     AutoPrediction = {
         Enabled = false; -- Change settings for better results.
         Ping0_10 = 0.1000;
