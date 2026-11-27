@@ -1,21 +1,20 @@
---[[ If keybind doesn't work do Enum.KeyCode instead ]]
-
 getgenv().MikeAmiri = {
     Key = 'API_Key_Here';
 
-    StartUP = {
+    ['StartUP'] = {
         Version = 'V1.5';
         Intro = true;
         Options = {
             SetLowGFX = false;
             SetMuteBoomBox = true;
             AutoReload = false;
+            SafeMode = false; -- Enable this if you wanna closet cheat ( GOOD FOR HIDING CHEAT + MAKES YOU LOOK MORE LEGIT + IT WILL MAKE IT SO BLATANT FEATURES DOESN'T WORK )
         };
         Unlock = {
             Enabled = true;
             Cap = 999;
             Optimizer = {
-                Enabled = false; -- ( NOT UNIVERSAL )
+                Enabled = false; -- This will make your game way smoother by alot, unlocks hz, makes game smoother and more. ( NOT UNIVERSAL )
             }
         };
         Panic = {
@@ -23,8 +22,9 @@ getgenv().MikeAmiri = {
             KeyBind = '=' -- Turns the cheat off or on.
         }
     };
-    SilentAim = {
+    ['SilentAim'] = {
         Enabled = true;
+        Notifications = true;
         Method = 'Auto';
         HitChance = 100;
         AirshotHitChance = 100;
@@ -36,7 +36,7 @@ getgenv().MikeAmiri = {
         NearestCursorHitPart = true;
         HitPart_Mode = 'Nearest Point'
     };
-    CamLock = {
+    ['CamLock'] = {
         Enabled = true,
         KeyBind = 'q';
         Hold_KeyBind = false;
@@ -61,7 +61,7 @@ getgenv().MikeAmiri = {
             Shake_Z = 5;
         }
     };
-    Visuals = {
+    ['Visuals'] = {
         SilentAim = {
             Show = true;
             StickyFov = false;
@@ -76,7 +76,7 @@ getgenv().MikeAmiri = {
             Color = Color3.fromRGB(100, 154, 200)
         }
     };
-    Safety = {
+    ['Safety'] = {
         AntiGroundShots = true;
         Checks = {
             AllowAirshots = true;
@@ -88,16 +88,9 @@ getgenv().MikeAmiri = {
         Resolver = {
             Enabled = true;
             AntiAimViewer = true
-        };
-        Notifications = {
-            Cheats  = { SilentAim = true; Method = 'Notify'};
-            Utility = {
-                Chat = { Enabled = true; Method = 'Notify'};
-                Mod  = { Enabled = true; Method = 'Notify'}
-            }
         }
     };
-    Misc = {
+    ['Misc'] = {
         Emotes = {
             Enabled = false,
             Animations = { -- Pack is the animation pack used for emotes. Most games use 'AnimationPack'.
@@ -109,7 +102,19 @@ getgenv().MikeAmiri = {
             Enabled = true;
             Method = 'Notification'; -- 'Kick' or 'Notification'
             Message = 'mod';
-            Kick_Message = 'Please check your internet connection and try again.'
+            Kick_Message = 'Please check your internet connection and try again.';
+            OppDetector = {
+                Enabled = true;
+                Method = '2'; -- Method = '1' ( Kicks you if your opps join ) Method = '2' ( Notifys if your opps join )
+                Notification_Message = 'Warning opp in your game';
+                Kick_Message = 'Opp joined your game';
+                OppList = {
+                    'dtbbullet'; -- So if dtbbullet joins you = notified or kick depending on which method you set it to.
+                    'Replace_With_Roblox_Username';
+                    'Replace_With_Roblox_Username';
+                    'Replace_With_Roblox_Username'; -- There are no limits you can add as much as people as you want
+                };
+            }
         };
         Spin = {
             Enabled = true;
@@ -123,7 +128,7 @@ getgenv().MikeAmiri = {
                 Enabled = true;
                 Notifications = true;
                 KeyBind = 'F';
-                Method = 'CFrame'; -- 'CFrame' or 'WalkSpeed'
+                Method = 'WalkSpeed'; -- 'CFrame' or 'WalkSpeed'
                 Speed = 250;
             };
             Jump = {
@@ -142,14 +147,14 @@ getgenv().MikeAmiri = {
             OnlyWorkInGamesWithNoMacro = true -- Recommended since most games already have in built macro.
         }
     };
-    GunFov = {
+    ['Gun'] = { -- The numbers for gun names are fov and the ones that have HitChance at end are for hitchance
         Enabled = false;
-        DoubleBarrel = 20;
-        Revolver = 15;
-        TacticalShotgun = 20;
-        Shotgun = 20
+        DoubleBarrel = 20;    DoubleBarrel_HitChance = 100;
+        Revolver = 15;        Revolver_HitChance = 100;
+        TacticalShotgun = 20; TacticalShotgun_HitChance = 100;
+        Shotgun = 20;         Shotgun_HitChance = 100;
     };
-    Range = {
+    ['Range'] = {
         Enabled = false;
         Fov = true;
         Prediction = false;
@@ -163,7 +168,7 @@ getgenv().MikeAmiri = {
         Mid_Prediction = 0.12;
         Far_Prediction = 0.115
     };
-    Chat = {
+    ['Chat'] = {
         Enabled = true;
         Notifications = true;
         SilentPrediction = '!spred';
@@ -174,7 +179,7 @@ getgenv().MikeAmiri = {
         EnableGunFov = '!gfov';
         EnableRange = '!range';
     };
-    Esp = {
+    ['Esp'] = {
         Enabled = false;
         KeyBind_Enabled = true;
         KeyBind = 'L';
@@ -207,7 +212,7 @@ getgenv().MikeAmiri = {
         MaxDistance = 9999;
         DistanceColor = Color3.fromRGB(255,255,255);
     };
-    AutoPrediction = {
+    ['AutoPrediction'] = {
         Enabled = false; -- Change settings for better results.
         Ping0_10 = 0.1000;
         Ping_20_30 = 0.1100;
