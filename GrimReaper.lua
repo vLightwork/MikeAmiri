@@ -2,7 +2,7 @@ getgenv().MikeAmiri = {
     Key = 'API_Key_Here';
 
     ['StartUP'] = {
-        Version = 'V1.5';
+        Version = 'V1.6';
         Intro = true;
         Options = {
             SetLowGFX = false;
