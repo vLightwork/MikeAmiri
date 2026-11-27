@@ -1,8 +1,10 @@
+--[[ If keybind doesn't work do Enum.KeyCode instead ]]
+
 getgenv().MikeAmiri = {
     Key = 'API_Key_Here';
 
     StartUP = {
-        Version = 'V1.4';
+        Version = 'V1.5';
         Intro = true;
         Options = {
             SetLowGFX = false;
@@ -13,7 +15,7 @@ getgenv().MikeAmiri = {
             Enabled = true;
             Cap = 999;
             Optimizer = {
-                Enabled = false; -- This will make your game way smoother by alot, unlocks hz, makes game smoother and more. ( NOT UNIVERSAL )
+                Enabled = false; -- ( NOT UNIVERSAL )
             }
         };
         Panic = {
@@ -21,7 +23,6 @@ getgenv().MikeAmiri = {
             KeyBind = '=' -- Turns the cheat off or on.
         }
     };
-
     SilentAim = {
         Enabled = true;
         Method = 'Auto';
@@ -60,7 +61,6 @@ getgenv().MikeAmiri = {
             Shake_Z = 5;
         }
     };
-
     Visuals = {
         SilentAim = {
             Show = true;
@@ -76,7 +76,6 @@ getgenv().MikeAmiri = {
             Color = Color3.fromRGB(100, 154, 200)
         }
     };
-
     Safety = {
         AntiGroundShots = true;
         Checks = {
@@ -98,7 +97,6 @@ getgenv().MikeAmiri = {
             }
         }
     };
-
     Misc = {
         Emotes = {
             Enabled = false,
@@ -125,7 +123,7 @@ getgenv().MikeAmiri = {
                 Enabled = true;
                 Notifications = true;
                 KeyBind = 'F';
-                Method = 'WalkSpeed'; -- 'CFrame' or 'WalkSpeed'
+                Method = 'CFrame'; -- 'CFrame' or 'WalkSpeed'
                 Speed = 250;
             };
             Jump = {
@@ -136,8 +134,14 @@ getgenv().MikeAmiri = {
                 Power = 100;
             }
         };
+        Macro = {
+            Enabled = true;
+            HoldKeyBind = true;
+            KeyBind = 'X';
+            MacroMethod = 'Mouse'; -- 'KeyBoard' or 'Mouse'
+            OnlyWorkInGamesWithNoMacro = true -- Recommended since most games already have in built macro.
+        }
     };
-
     GunFov = {
         Enabled = false;
         DoubleBarrel = 20;
@@ -145,7 +149,6 @@ getgenv().MikeAmiri = {
         TacticalShotgun = 20;
         Shotgun = 20
     };
-
     Range = {
         Enabled = false;
         Fov = true;
@@ -160,7 +163,6 @@ getgenv().MikeAmiri = {
         Mid_Prediction = 0.12;
         Far_Prediction = 0.115
     };
-
     Chat = {
         Enabled = true;
         Notifications = true;
@@ -172,7 +174,39 @@ getgenv().MikeAmiri = {
         EnableGunFov = '!gfov';
         EnableRange = '!range';
     };
+    Esp = {
+        Enabled = false;
+        KeyBind_Enabled = true;
+        KeyBind = 'L';
 
+        BoxEnabled = true;
+        Box_fill = false;
+        Boxes_Color = Color3.fromRGB(100, 154, 200);
+
+        HealthBar = true;
+        HealthBarFullColor = Color3.fromRGB(7, 23, 255);
+        HealthBarLowColor = Color3.fromRGB(255, 4, 4);
+
+        ArmorHealthBar = true;
+        ArmorHealthBarFullColor = Color3.fromRGB(0, 189, 255);
+        ArmorHealthBarLowColor = Color3.fromRGB(0, 136, 198);
+
+        Names = true;
+        Names_Color = Color3.fromRGB(255,255,255);
+
+        Tool = true;
+        Tool_Color = Color3.fromRGB(255,255,255);
+
+        Tracers = false;
+        Tracers_Color = Color3.fromRGB(100, 154, 200);
+
+        CrewEsp = false;
+        CrewColor = Color3.fromRGB(127, 255, 212);
+
+        Distance = true;
+        MaxDistance = 9999;
+        DistanceColor = Color3.fromRGB(255,255,255);
+    };
     AutoPrediction = {
         Enabled = false; -- Change settings for better results.
         Ping0_10 = 0.1000;
